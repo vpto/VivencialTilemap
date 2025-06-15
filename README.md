@@ -1,46 +1,22 @@
-# PGCCHIB - Processamento Gráfico
+# 🧊 Tilemap Isométrico (Diamond) em C++ com OpenGL
 
-Este repositório contém exemplos e códigos utilizados nas disciplinas de **Processamento Gráfico** e **Fundamentos de Computação Gráfica**. Ele é estruturado para facilitar a organização dos arquivos e a compilação dos projetos utilizando CMake.
+Este projeto é uma implementação simples de um **tilemap isométrico do tipo "diamond"** em C++ utilizando **OpenGL**, **GLFW**, **GLAD** e **STB Image**. Ele foi desenvolvido como parte de uma atividade de revisão para a disciplina de Computação Gráfica.
 
-## 📂 Estrutura do Repositório
+---
 
-```plaintext
-📂 PGCCHIB/
-├── 📂 include/               # Cabeçalhos e bibliotecas de terceiros
-│   ├── 📂 glad/              # Cabeçalhos da GLAD (OpenGL Loader)
-│   │   ├── glad.h
-│   │   ├── 📂 KHR/           # Diretório com cabeçalhos da Khronos (GLAD)
-│   │       ├── khrplatform.h
-├── 📂 common/                # Código reutilizável entre os projetos
-│   ├── glad.c                # Implementação da GLAD
-├── 📂 src/                   # Código-fonte dos exemplos e exercícios
-│   ├── HelloTriangle.cpp     # Exemplo básico de renderização com OpenGL
-│   ├── HelloTransform.cpp    # Exemplo de transformação de objetos em OpenGL
-│   ├── ...                   # Outros exemplos e exercícios futuros
-├── 📂 build/                 # Diretório gerado pelo CMake (não incluído no repositório)
-├── 📄 CMakeLists.txt         # Configuração do CMake para compilar os projetos
-├── 📄 README.md              # Este arquivo, com a documentação do repositório
-├── 📄 GettingStarted.md      # Tutorial detalhado sobre como compilar usando o CMake
-```
+## 📌 Objetivos
 
-Siga as instruções detalhadas em [GettingStarted.md](GettingStarted.md) para configurar e compilar o projeto.
+- Revisar os conceitos de renderização isométrica.
+- Praticar a navegação por matriz 2D com 8 direções possíveis.
+- Implementar um tilemap com projeção ortográfica e textura.
+- Aprender o mapeamento de tiles usando uma spritesheet.
 
-## ⚠️ **IMPORTANTE: Baixar a GLAD Manualmente**
-Para que o projeto funcione corretamente, é necessário **baixar a GLAD manualmente** utilizando o **GLAD Generator**.
+---
 
-### 🔗 **Acesse o web service do GLAD**:
-👉 [GLAD Generator](https://glad.dav1d.de/)
+## 🖼️ Imagem do Tileset
 
-### ⚙️ **Configuração necessária:**
-- **API:** OpenGL  
-- **Version:** 3.3+ (ou superior compatível com sua máquina)  
-- **Profile:** Core  
-- **Language:** C/C++  
+O projeto utiliza o tileset, que contém 7 tiles (índices de 0 a 6) em formato isométrico com proporção 2:1 (largura = 2 × altura).
 
-### 📥 **Baixe e extraia os arquivos:**
-Após a geração, extraia os arquivos baixados e coloque-os nos diretórios correspondentes:
-- Copie **`glad.h`** para `include/glad/`
-- Copie **`khrplatform.h`** para `include/glad/KHR/`
-- Copie **`glad.c`** para `common/`
+Exemplo dos tiles:
 
-🚨 **Sem esses arquivos, a compilação falhará!** É necessário colocar esses arquivos nos diretórios corretos, conforme a orientação acima.
+https://github.com/user-attachments/assets/072006bf-0909-4541-be8c-af9216967592
